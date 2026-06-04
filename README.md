@@ -27,6 +27,45 @@
 7. Visual Review：渲染 SVG 预览并做 native conversion dry-run。
 8. PPTX Assembly：导出 `deck_editable.pptx`，同时生成 `deck_snapshot.pptx` 作为视觉对照。
 
+## 安装 Skill
+
+有两种常用安装方式。
+
+### 方式一：把仓库链接交给 agent 自动安装
+
+如果你的 agent 支持从 GitHub 仓库安装 skill，可以直接把仓库链接发给它，并要求安装后运行环境检查：
+
+```text
+请安装这个 skill，并在安装后运行环境检查：
+https://github.com/FecyJ/codex-bento-ppt
+
+安装完成后请执行：
+python3 scripts/check_environment.py
+```
+
+这种方式适合支持 skill installer、插件市场或自动拉取 GitHub skill 的 agent。安装位置由对应 agent 自己决定。
+
+### 方式二：手动安装
+
+把仓库 clone 到当前 agent 能识别的 skills 目录。若你希望多个 agent 共享使用，推荐放在通用目录 `~/.agents/skills/`：
+
+```bash
+mkdir -p ~/.agents/skills
+git clone https://github.com/FecyJ/codex-bento-ppt.git ~/.agents/skills/codex-bento-ppt
+cd ~/.agents/skills/codex-bento-ppt
+python3 -m pip install -r requirement.txt
+python3 scripts/check_environment.py
+```
+
+如果你的 agent 使用自己的 skill 目录，把上面的目标路径替换成该 agent 识别的目录即可。更新已有安装时运行：
+
+```bash
+cd ~/.agents/skills/codex-bento-ppt
+git pull
+python3 -m pip install -r requirement.txt
+python3 scripts/check_environment.py
+```
+
 ## 安装依赖
 
 ```bash
