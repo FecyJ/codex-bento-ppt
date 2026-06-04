@@ -244,7 +244,10 @@ def main() -> int:
         const="",
         help="Write native conversion diagnostics JSON. Optional value overrides the default <output>.trace.json path.",
     )
-    parser.add_argument("--ppt-master-skill-dir", help="Path to the ppt-master skill directory")
+    parser.add_argument(
+        "--ppt-master-skill-dir",
+        help="Optional external override: path to svg_to_pptx, its parent, or a legacy ppt-master skill dir",
+    )
     parser.add_argument("--quiet", action="store_true", help="Reduce converter output")
     args = parser.parse_args()
 

@@ -109,7 +109,7 @@ The source article's direct SVG prompt begins from an "information architecture 
 
 ### PPT Export
 
-Keep the SVG files as the canonical slide designs. Export to PPTX through the native editable path so PowerPoint users can directly select text, cards, shapes, groups, lines, paths, and images. Also emit an SVG snapshot deck for visual comparison. A PNG fallback is acceptable only for the snapshot deck or when explicitly requested; it is not a successful final deliverable when native editability is required.
+Keep the SVG files as the canonical slide designs. Export to PPTX through the bundled native editable converter so PowerPoint users can directly select text, cards, shapes, groups, lines, paths, and images. Also emit an SVG snapshot deck for visual comparison. A PNG fallback is acceptable only for the snapshot deck or when explicitly requested; it is not a successful final deliverable when native editability is required.
 
 ## Replication Checklist
 

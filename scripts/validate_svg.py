@@ -185,9 +185,12 @@ def main() -> int:
     parser.add_argument("svg_files", nargs="+", help="SVG files to validate")
     parser.add_argument("--render-dir", help="Directory for PNG previews")
     parser.add_argument("--json-out", help="Write validation report JSON")
-    parser.add_argument("--native-editable", action="store_true", help="Dry-run ppt-master native DrawingML conversion")
+    parser.add_argument("--native-editable", action="store_true", help="Dry-run native DrawingML conversion")
     parser.add_argument("--merge-paragraphs", action="store_true", help="Use paragraph merge mode during native dry-run")
-    parser.add_argument("--ppt-master-skill-dir", help="Path to the ppt-master skill directory")
+    parser.add_argument(
+        "--ppt-master-skill-dir",
+        help="Optional external override: path to svg_to_pptx, its parent, or a legacy ppt-master skill dir",
+    )
     args = parser.parse_args()
 
     render_dir = Path(args.render_dir).expanduser().resolve() if args.render_dir else None

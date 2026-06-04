@@ -11,7 +11,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from ppt_master_bridge import PptMasterBridgeError, resolve_ppt_master_skill_dir
+from ppt_master_bridge import PptMasterBridgeError, resolve_native_converter_location
 
 
 REQUIRED_PACKAGES = {
@@ -85,18 +85,20 @@ def check_packages() -> list[dict]:
 
 def check_native_converter(explicit: str | None) -> dict:
     try:
-        skill_dir = resolve_ppt_master_skill_dir(explicit)
+        location = resolve_native_converter_location(explicit)
         return {
             "name": "export_editable_pptx",
             "required": True,
             "status": "pass",
-            "detail": f"native svg_to_pptx package found at {skill_dir}",
+            "source": location.source,
+            "detail": f"native svg_to_pptx package found at {location.package_dir}",
         }
     except PptMasterBridgeError as exc:
         return {
             "name": "export_editable_pptx",
             "required": True,
             "status": "fail",
+            "source": "missing",
             "detail": f"{exc}. Final delivery requires this capability.",
         }
 
@@ -166,13 +168,17 @@ def print_text(report: dict) -> None:
     print(f"Requirement file: {report['requirement_file']}")
     for item in report["checks"]:
         marker = "required" if item["required"] else "optional"
-        print(f"- {item['status']}: {item['name']} ({marker}) - {item['detail']}")
+        source = f" [{item['source']}]" if item.get("source") else ""
+        print(f"- {item['status']}: {item['name']} ({marker}){source} - {item['detail']}")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check Bento PPT workflow runtime capabilities.")
     parser.add_argument("--json-out", help="Write full capability report to JSON")
-    parser.add_argument("--ppt-master-skill-dir", help="Path to a skill directory containing scripts/svg_to_pptx")
+    parser.add_argument(
+        "--ppt-master-skill-dir",
+        help="Optional external override: path to svg_to_pptx, its parent, or a legacy ppt-master skill dir",
+    )
     args = parser.parse_args()
 
     report = build_report(args)

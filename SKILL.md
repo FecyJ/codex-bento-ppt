@@ -38,7 +38,7 @@ Minimum required capabilities:
 - `read_markdown`: read Markdown or plain text source material directly.
 - `run_python`: run the bundled scripts with Python and dependencies from `requirement.txt`.
 - `render_svg`: render SVG previews through CairoSVG/Pillow.
-- `export_editable_pptx`: convert SVG primitives into native editable PowerPoint elements.
+- `export_editable_pptx`: convert SVG primitives into native editable PowerPoint elements through the bundled `vendor/svg_to_pptx` converter and `vendor/svg_finalize` helpers.
 
 Optional enhancement capabilities:
 
@@ -147,7 +147,7 @@ Run:
 python3 <skill_dir>/scripts/validate_svg.py <project_dir>/svg/*.svg --render-dir <project_dir>/previews --json-out <project_dir>/validation.json
 ```
 
-For decks that will be delivered as editable PowerPoint, add the native conversion dry-run:
+For decks that will be delivered as editable PowerPoint, add the native conversion dry-run. This uses the bundled native converter by default:
 
 ```bash
 python3 <skill_dir>/scripts/validate_svg.py <project_dir>/svg/*.svg --render-dir <project_dir>/previews --json-out <project_dir>/validation.json --native-editable
@@ -164,6 +164,8 @@ python3 <skill_dir>/scripts/assemble_pptx.py <project_dir>/svg <project_dir>/exp
 ```
 
 The primary exported PPTX converts SVG elements into native PowerPoint DrawingML objects, so text, shapes, groups, lines, paths, and images can be selected directly in PowerPoint. The snapshot PPTX embeds each SVG as a full-slide object for visual comparison only. Use `--png-fallback` when the snapshot deck should be rasterized PNG pages.
+
+The native converter is bundled under `vendor/svg_to_pptx` with its `vendor/svg_finalize` helper dependency, so a separate `ppt-master` installation is not required for normal operation. Use `--ppt-master-skill-dir` or `PPT_MASTER_SKILL_DIR` only when intentionally comparing against or overriding with an external converter.
 
 Default text mode preserves layout: positioned `tspan` lines may become separate PowerPoint text frames. Add `--merge-paragraphs` only when the user explicitly prefers larger editable paragraph boxes and accepts possible PowerPoint text reflow.
 
@@ -238,7 +240,9 @@ python3 <skill_dir>/scripts/init_project.py <project_dir> --title "<deck title>"
 - `scripts/init_project.py`: create project folders and manifest.
 - `scripts/ingest_sources.py`: scan and extract user-provided raw material.
 - `scripts/check_environment.py`: report required and optional runtime capabilities.
-- `scripts/ppt_master_bridge.py`: locate and load the native SVG-to-PPTX conversion code.
+- `scripts/ppt_master_bridge.py`: load the bundled native SVG-to-PPTX conversion code, with optional external override support.
 - `scripts/validate_svg.py`: parse, render, lint, and optionally dry-run native SVG conversion.
 - `scripts/assemble_pptx.py`: export SVG pages to native editable PPTX plus a snapshot PPTX.
 - `scripts/inspect_pptx.py`: inspect slide count, packaged media, and native editable object counts.
+- `vendor/svg_to_pptx/`: bundled MIT-licensed native converter imported from `ppt-master`.
+- `vendor/svg_finalize/`: bundled helper package used by the native converter for icon expansion and tspan handling.
