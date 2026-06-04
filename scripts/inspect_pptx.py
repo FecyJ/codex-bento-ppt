@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect Codex Bento PPTX packages for completion evidence."""
+"""Inspect Bento PPTX packages for completion evidence."""
 
 from __future__ import annotations
 
@@ -58,7 +58,7 @@ def inspect_pptx(path: Path) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Inspect a Codex Bento PPTX package.")
+    parser = argparse.ArgumentParser(description="Inspect a Bento PPTX package.")
     parser.add_argument("pptx", help="PPTX file to inspect")
     parser.add_argument("--expect-slides", type=int, help="Expected slide count")
     parser.add_argument("--require-svg-media", action="store_true", help="Fail unless SVG media exists for every slide")

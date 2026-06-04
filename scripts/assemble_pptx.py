@@ -112,7 +112,7 @@ def embed_svgs(base_pptx: Path, svg_files: list[Path], output_pptx: Path) -> Non
         media_dir.mkdir(exist_ok=True)
 
         for index, svg_path in enumerate(svg_files, start=1):
-            media_name = f"codex_bento_slide_{index:02d}.svg"
+            media_name = f"bento_ppt_slide_{index:02d}.svg"
             shutil.copyfile(svg_path, media_dir / media_name)
 
             rels_path = tmp_dir / "ppt" / "slides" / "_rels" / f"slide{index}.xml.rels"
@@ -132,7 +132,7 @@ def embed_svgs(base_pptx: Path, svg_files: list[Path], output_pptx: Path) -> Non
 
             slide_path = tmp_dir / "ppt" / "slides" / f"slide{index}.xml"
             slide_tree = ET.parse(slide_path)
-            append_picture(slide_tree.getroot(), rel_id, 1000 + index, f"Codex Bento SVG {index:02d}")
+            append_picture(slide_tree.getroot(), rel_id, 1000 + index, f"Bento PPT SVG {index:02d}")
             slide_tree.write(slide_path, encoding="utf-8", xml_declaration=True)
 
         output_pptx.parent.mkdir(parents=True, exist_ok=True)
@@ -229,7 +229,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Assemble SVG slides into editable PPTX.")
     parser.add_argument("svg_dir", help="Directory containing slide SVG files")
     parser.add_argument("output_pptx", help="Output editable native PPTX path")
-    parser.add_argument("--title", default="Codex Bento PPT", help="Deck title metadata")
+    parser.add_argument("--title", default="Bento PPT", help="Deck title metadata")
     parser.add_argument(
         "--snapshot-output",
         help="Snapshot PPTX path. Defaults to <output_stem>_snapshot.pptx unless --no-snapshot is used.",

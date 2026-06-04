@@ -1,4 +1,4 @@
-# Prompt: Codex Requirement Consultant
+# Prompt: Requirement Consultant
 
 Use this role before deck creation.
 

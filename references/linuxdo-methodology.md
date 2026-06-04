@@ -15,9 +15,9 @@ The workflow is not "topic in, template out." It treats a deck as a consultant a
 4. Create a planning draft for every page before visual design.
 5. Use Bento Grid card layouts for information-heavy pages.
 6. Generate full-page SVG designs at 1280x720.
-7. Export PPTX while preserving editability. In this Codex skill, native DrawingML export is the default, with an SVG snapshot deck as a visual reference.
+7. Export PPTX while preserving editability. In this skill, native DrawingML export is the required final path, with an SVG snapshot deck as a visual reference.
 
-The original post uses multiple AI products for different jobs. In this skill, every role is performed by Codex. When a step calls for search, Codex uses web access or local source files; when a step calls for design, Codex writes SVG directly.
+The original post uses multiple AI products for different jobs. In this skill, every role is performed by the active agent. When a step calls for search, use the active agent's web or local-source tools; when a step calls for design, write editable SVG primitives directly.
 
 ## Phase Notes
 
@@ -25,7 +25,7 @@ The original post uses multiple AI products for different jobs. In this skill, e
 
 Before consulting or researching, read the user's original material. Build a source inventory and digest so every later phase can point back to concrete evidence rather than relying on a loose impression of the files.
 
-For directories, scan recursively. For each source, record path, file type, title or inferred title, extraction status, high-level topics, reusable figures/tables/images if known, and any extraction warning. Do not silently discard unsupported files. User-provided images and images extracted from documents become candidate visual assets for page planning.
+For directories, scan recursively. Markdown/text reading is the required baseline. DOCX/PDF/spreadsheet reading is an optional enhancement: prefer available document-processing tools first, then use fallback extraction if available. For each source, record path, file type, title or inferred title, extraction status, high-level topics, reusable figures/tables/images if known, and any extraction warning. Do not silently discard unsupported files. User-provided images and images extracted from documents become candidate visual assets for page planning.
 
 ### Demand Clarification
 
@@ -45,7 +45,7 @@ Do not ask questions that can be answered from supplied files or the conversatio
 
 The outline should be grounded in facts. For each section, gather current context, evidence, examples, and counterpoints. Prefer primary sources. Keep enough citation detail for the final deck creator to avoid unsupported claims.
 
-The source article emphasizes large-scale information retrieval after outline planning. In Codex, use the approved outline or likely section titles as research targets, then return slide-level evidence packets. Do not let outdated or contradicted claims become core slide messages.
+The source article emphasizes large-scale information retrieval after outline planning. Use the approved outline or likely section titles as research targets, then return slide-level evidence packets. Do not let outdated or contradicted claims become core slide messages.
 
 ### Sticky Notes
 
@@ -70,7 +70,7 @@ This phase should deliberately look unpolished. The source article shows a simpl
 
 ### Bento Grid Design
 
-Bento Grid is the default content-page design language because it is flexible, information-dense, and easy for Codex to reason about. Use card sizes to show hierarchy. Maintain at least 20px gutters between cards. Important content gets the largest card.
+Bento Grid is the default content-page design language because it is flexible, information-dense, and easy for an agent to reason about. Use card sizes to show hierarchy. Maintain at least 20px gutters between cards. Important content gets the largest card.
 
 Common patterns:
 
@@ -109,7 +109,7 @@ The source article's direct SVG prompt begins from an "information architecture 
 
 ### PPT Export
 
-Keep the SVG files as the canonical slide designs. Export to PPTX through the native editable path so PowerPoint users can directly select text, cards, shapes, groups, lines, paths, and images. Also emit an SVG snapshot deck for visual comparison. A PNG fallback is acceptable only for the snapshot deck or when explicitly requested.
+Keep the SVG files as the canonical slide designs. Export to PPTX through the native editable path so PowerPoint users can directly select text, cards, shapes, groups, lines, paths, and images. Also emit an SVG snapshot deck for visual comparison. A PNG fallback is acceptable only for the snapshot deck or when explicitly requested; it is not a successful final deliverable when native editability is required.
 
 ## Replication Checklist
 

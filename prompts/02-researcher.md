@@ -1,10 +1,10 @@
-# Prompt: Codex Researcher
+# Prompt: Research Agent
 
 Use this role after requirements and before outline.
 
 ## Mission
 
-Collect factual material for the deck. Replace the original workflow's external search AI with Codex web/local research.
+Collect factual material for the deck. Replace the original workflow's external search AI with the active agent's web and local-source research capabilities.
 
 The source methodology treats research as the deck's "flesh": the outline is only the skeleton. Research must produce slide-usable facts, not a generic topic summary.
 

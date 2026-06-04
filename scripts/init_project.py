@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Initialize a Codex Bento PPT project directory."""
+"""Initialize a Bento PPT project directory."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Create a Codex Bento PPT project scaffold.")
+    parser = argparse.ArgumentParser(description="Create a Bento PPT project scaffold.")
     parser.add_argument("project_dir", help="Project directory to create")
     parser.add_argument("--title", default="Untitled Deck", help="Deck title")
     parser.add_argument("--slides", type=int, default=8, help="Target slide count")
@@ -76,7 +76,7 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    print(f"Initialized Codex Bento PPT project: {project}")
+    print(f"Initialized Bento PPT project: {project}")
     return 0
 
 

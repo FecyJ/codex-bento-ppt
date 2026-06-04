@@ -1,4 +1,4 @@
-# Prompt: Codex Visual Reviewer
+# Prompt: Visual Reviewer
 
 Use this after generating SVG pages and before PPTX assembly.
 

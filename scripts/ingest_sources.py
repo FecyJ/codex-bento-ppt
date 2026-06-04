@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read user-provided raw materials for a Codex Bento PPT project."""
+"""Read user-provided raw materials for a Bento PPT project."""
 
 from __future__ import annotations
 
@@ -316,7 +316,7 @@ def write_digest(records: list[SourceRecord], output_path: Path) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Ingest raw source material for a Codex Bento PPT project.")
+    parser = argparse.ArgumentParser(description="Ingest raw source material for a Bento PPT project.")
     parser.add_argument("source_paths", nargs="+", help="Files or directories supplied by the user")
     parser.add_argument("--project-dir", required=True, help="Project directory that receives source_inventory.json and source_digest.md")
     args = parser.parse_args()

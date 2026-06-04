@@ -1,12 +1,12 @@
 ---
 name: codex-bento-ppt
-description: "Build presentation decks with the Linux.do PPT Agent workflow: source ingestion, requirement consulting, Codex-based research, sticky-note outlines, per-slide planning, Bento Grid SVG design, validation, and native editable SVG-to-PPTX export. Use when the user asks for a new PPT, slide deck, presentation, AI PPT workflow, editable PPTX/SVG slides, or wants to replicate the linux.do topic 1782304 approach with Codex."
+description: "Build presentation decks with the Linux.do PPT Agent workflow: source ingestion, requirement consulting, agent-led research, sticky-note outlines, per-slide planning, Bento Grid SVG design, validation, and native editable SVG-to-PPTX export. Use when the user asks for a new PPT, slide deck, presentation, AI PPT workflow, editable PPTX/SVG slides, or wants to replicate the linux.do topic 1782304 approach."
 metadata:
   source_url: https://linux.do/t/topic/1782304
-  short-description: Codex Bento Grid PPT workflow
+  short-description: Bento Grid PPT workflow
 ---
 
-# Codex Bento PPT
+# Bento PPT Agent Workflow
 
 ## Purpose
 
@@ -18,15 +18,35 @@ Use this for high-quality decks where content logic and slide planning matter. D
 
 - Start from questions and source context, not from a template.
 - When the user provides files, directories, URLs, or pasted source text, perform Source Ingestion before requirement consulting or research.
-- For DOCX, PDF, and spreadsheet sources, use the dedicated `docx`, `pdf`, and `xlsx` skills first; use `scripts/ingest_sources.py` only as a normalization and fallback path.
-- Use Codex for every role. If the source workflow names another AI, replace it with the corresponding Codex role.
+- Markdown/text reading is required. If the active agent cannot read Markdown or plain text, stop and ask for an environment that can.
+- DOCX, PDF, and spreadsheet reading are optional enhancement capabilities. Use the active agent's dedicated document-processing skills/tools first when available; use `scripts/ingest_sources.py` as a normalization and fallback path.
+- Use the active agent for every role. If the source workflow names a specific AI product, map that role to the current agent and its available tools.
 - Research before outline when the topic is current, market-facing, technical, legal, financial, medical, or otherwise fact-sensitive.
 - Treat each slide as one digital sticky note before design. The sticky note must state role, message, evidence, and visual intent.
 - Create a planning draft before SVG. The draft fixes what appears where, without decorative polish.
 - Generate final pages as SVG with `viewBox="0 0 1280 720"`.
 - Use Bento Grid card layouts for content pages unless a slide role clearly calls for another structure.
 - Validate every SVG before exporting. Broken, blank, unsafe, wrong-size, or unreadable SVGs must be repaired before assembly.
-- Export with `scripts/assemble_pptx.py`. The default output must be a native editable PPTX built from SVG elements, with a snapshot PPTX kept for visual comparison. Keep source SVGs with the deck.
+- Export with `scripts/assemble_pptx.py`. The final deliverable must be a native editable PPTX built from SVG elements, with a snapshot PPTX kept for visual comparison. If native editable export is unavailable, fail with a fix path rather than delivering a flattened substitute. Keep source SVGs with the deck.
+
+## Portability Model
+
+Read `references/agent-portability.md` when running this skill in a new agent environment or when native editable export/document ingestion capability is uncertain.
+
+Minimum required capabilities:
+
+- `read_markdown`: read Markdown or plain text source material directly.
+- `run_python`: run the bundled scripts with Python and dependencies from `requirement.txt`.
+- `render_svg`: render SVG previews through CairoSVG/Pillow.
+- `export_editable_pptx`: convert SVG primitives into native editable PowerPoint elements.
+
+Optional enhancement capabilities:
+
+- `read_docx`, `read_pdf`, `read_xlsx`: extract richer structure, tables, OCR, comments, formulas, charts, and embedded images through environment-specific document tools.
+- `extract_images`: gather user-provided and document-embedded images into `source_assets/`.
+- `web_research`: browse or search when local material is insufficient or facts may have changed.
+
+When optional document capabilities are absent, continue only if Markdown/text source coverage is enough for the requested deck. Otherwise ask the user to provide Markdown/text exports or extracted source material.
 
 ## Workflow
 
@@ -38,10 +58,10 @@ Read the user's original material before deciding what the presentation should s
 
 Priority:
 
-- Markdown/text: read directly or through the fallback script.
-- DOCX: use the `docx` skill first to extract text, tables, and embedded images; if unavailable or insufficient, use the fallback script. Normalize successful related-skill outputs with `extraction_method: docx-skill`.
-- PDF: use the `pdf` skill first to extract text, tables, page images, embedded images, or OCR when needed; if unavailable or insufficient, use the fallback script. Normalize successful related-skill outputs with `extraction_method: pdf-skill`.
-- XLSX/XLSM/CSV/TSV: use the `xlsx` skill first to inspect sheets, tables, formulas, charts, and embedded images; if unavailable or insufficient, use the fallback script. Normalize successful related-skill outputs with `extraction_method: xlsx-skill`.
+- Markdown/text: required baseline; read directly or through the fallback script.
+- DOCX: optional enhancement; use an available DOCX-processing skill/tool first to extract text, tables, and embedded images. If unavailable or insufficient, use the fallback script. Normalize successful related-skill outputs with `extraction_method: docx-skill` or another clear environment-specific method name.
+- PDF: optional enhancement; use an available PDF-processing skill/tool first to extract text, tables, page images, embedded images, or OCR when needed. If unavailable or insufficient, use the fallback script. Normalize successful related-skill outputs with `extraction_method: pdf-skill` or another clear environment-specific method name.
+- XLSX/XLSM/CSV/TSV: optional enhancement; use an available spreadsheet-processing skill/tool first to inspect sheets, tables, formulas, charts, and embedded images. If unavailable or insufficient, use the fallback script. Normalize successful related-skill outputs with `extraction_method: xlsx-skill` or another clear environment-specific method name.
 - User-provided images, SVGs, screenshots, and images extracted by other document skills must be recorded as reusable visual material for later slide planning and design.
 
 For fallback extraction and inventory normalization, run:
@@ -203,20 +223,22 @@ python3 <skill_dir>/scripts/init_project.py <project_dir> --title "<deck title>"
 
 ## Reference Map
 
-- `references/linuxdo-methodology.md`: source-derived methodology, adapted for Codex.
+- `references/agent-portability.md`: capability contracts and environment adapters for non-Codex agents.
+- `references/linuxdo-methodology.md`: source-derived methodology, adapted for the active agent.
 - `references/source/linuxdo-1782304/article.md`: static local archive of the original linux.do post with local image references.
 - `references/source/linuxdo-1782304/manifest.json`: source URL, image metadata, and local paths for the archived attachments.
 - `references/source/linuxdo-1782304/prompt-extracts.md`: direct open prompt/code-block extracts from the archived post.
 - `prompts/00-source-ingestion.md`: read user-provided raw material.
 - `prompts/01-requirement-consultant.md`: demand clarification.
-- `prompts/02-researcher.md`: Codex research pass.
+- `prompts/02-researcher.md`: agent research pass.
 - `prompts/03-outline-architect.md`: sticky-note outline.
 - `prompts/04-page-planner.md`: per-page planning draft.
 - `prompts/05-svg-designer.md`: Bento Grid SVG generation.
 - `prompts/06-visual-reviewer.md`: review and repair rubric.
 - `scripts/init_project.py`: create project folders and manifest.
 - `scripts/ingest_sources.py`: scan and extract user-provided raw material.
-- `scripts/ppt_master_bridge.py`: locate and load `ppt-master` native SVG-to-PPTX conversion code.
+- `scripts/check_environment.py`: report required and optional runtime capabilities.
+- `scripts/ppt_master_bridge.py`: locate and load the native SVG-to-PPTX conversion code.
 - `scripts/validate_svg.py`: parse, render, lint, and optionally dry-run native SVG conversion.
 - `scripts/assemble_pptx.py`: export SVG pages to native editable PPTX plus a snapshot PPTX.
 - `scripts/inspect_pptx.py`: inspect slide count, packaged media, and native editable object counts.

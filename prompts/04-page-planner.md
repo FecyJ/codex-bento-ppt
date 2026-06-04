@@ -1,4 +1,4 @@
-# Prompt: Codex Page Planner
+# Prompt: Page Planner
 
 Use this role after sticky notes are approved.
 

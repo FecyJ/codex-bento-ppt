@@ -1,4 +1,4 @@
-# Prompt: Codex SVG Designer
+# Prompt: SVG Designer
 
 Use this role after page planning.
 

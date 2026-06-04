@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate and render Codex Bento PPT SVG slides."""
+"""Validate and render Bento PPT SVG slides."""
 
 from __future__ import annotations
 
@@ -181,7 +181,7 @@ def validate_one(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate Codex Bento PPT SVG slides.")
+    parser = argparse.ArgumentParser(description="Validate Bento PPT SVG slides.")
     parser.add_argument("svg_files", nargs="+", help="SVG files to validate")
     parser.add_argument("--render-dir", help="Directory for PNG previews")
     parser.add_argument("--json-out", help="Write validation report JSON")

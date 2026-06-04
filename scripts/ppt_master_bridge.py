@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Load ppt-master's native SVG-to-PPTX converter from a sibling skill."""
+"""Load the native SVG-to-PPTX converter from a configured skill path."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from typing import Callable
 
 
 class PptMasterBridgeError(RuntimeError):
-    """Raised when the ppt-master converter cannot be located or imported."""
+    """Raised when the native converter cannot be located or imported."""
 
 
 def _candidate_skill_dirs(explicit: str | Path | None = None) -> list[Path]:
@@ -26,7 +26,9 @@ def _candidate_skill_dirs(explicit: str | Path | None = None) -> list[Path]:
     candidates.extend(
         [
             this_skill_dir.parent / "ppt-master",
+            this_skill_dir / "vendor" / "ppt-master",
             Path.home() / ".agents" / "skills" / "ppt-master",
+            Path.home() / ".claude" / "skills" / "ppt-master",
             Path.home() / ".codex" / "skills" / "ppt-master",
         ]
     )
@@ -42,7 +44,7 @@ def _candidate_skill_dirs(explicit: str | Path | None = None) -> list[Path]:
 
 
 def resolve_ppt_master_skill_dir(explicit: str | Path | None = None) -> Path:
-    """Return the first usable ppt-master skill directory."""
+    """Return the first usable skill directory containing svg_to_pptx."""
     attempted: list[str] = []
     for skill_dir in _candidate_skill_dirs(explicit):
         attempted.append(str(skill_dir))
@@ -50,14 +52,14 @@ def resolve_ppt_master_skill_dir(explicit: str | Path | None = None) -> Path:
         if (package_dir / "__init__.py").exists():
             return skill_dir
     raise PptMasterBridgeError(
-        "Could not locate ppt-master's svg_to_pptx package. "
+        "Could not locate the native svg_to_pptx package. "
         "Set PPT_MASTER_SKILL_DIR or pass --ppt-master-skill-dir. "
         f"Checked: {', '.join(attempted)}"
     )
 
 
 def import_ppt_master_module(module_name: str, explicit: str | Path | None = None):
-    """Import a module from ppt-master/scripts."""
+    """Import a module from a converter skill's scripts directory."""
     skill_dir = resolve_ppt_master_skill_dir(explicit)
     scripts_dir = skill_dir / "scripts"
     scripts_dir_str = str(scripts_dir)
