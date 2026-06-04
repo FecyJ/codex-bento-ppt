@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect id="background" x="0" y="0" width="1280" height="720" fill="#070b16"/>
+  <g id="page-title">
+    <text x="72" y="88" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="700" fill="#5ff4e8">PLANNING BEFORE DESIGN</text>
+    <text x="72" y="134" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="800" fill="#f8fafc">便利贴与策划稿：设计前先冻结意图</text>
+  </g>
+  <g id="sticky-wall">
+    <rect data-role="card" x="72" y="164" width="500" height="410" rx="24" fill="#0b1728" stroke="#22d3ee" stroke-width="2"/>
+    <text x="108" y="216" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">Digital Sticky Notes</text>
+    <g id="note-1"><rect x="108" y="256" width="170" height="100" rx="14" fill="#102033" stroke="#5eead4"/><text x="130" y="290" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#dbeafe">Role</text><text x="130" y="320" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#f8fafc">cover</text></g>
+    <g id="note-2"><rect x="304" y="256" width="220" height="100" rx="14" fill="#102033" stroke="#38bdf8"/><text x="326" y="290" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#dbeafe">Message</text><text x="326" y="320" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#f8fafc">一页一个观点</text></g>
+    <g id="note-3"><rect x="108" y="382" width="170" height="100" rx="14" fill="#102033" stroke="#a78bfa"/><text x="130" y="416" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#dbeafe">Evidence</text><text x="130" y="446" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#f8fafc">来源路径</text></g>
+    <g id="note-4"><rect x="304" y="382" width="220" height="100" rx="14" fill="#102033" stroke="#fb923c"/><text x="326" y="416" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#dbeafe">Visual intent</text><text x="326" y="446" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#f8fafc">先定表达方式</text></g>
+    <text x="108" y="530" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#91a7bd">便签让顺序、消息和证据在设计前可被调整。</text>
+  </g>
+  <g id="page-plan">
+    <rect data-role="card" x="604" y="164" width="604" height="410" rx="24" fill="#101827" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="640" y="216" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">Page Planning Draft</text>
+    <rect x="640" y="252" width="232" height="236" rx="16" fill="#e5e7eb" stroke="#94a3b8"/>
+    <rect x="662" y="276" width="188" height="24" rx="6" fill="#cbd5e1"/>
+    <rect x="662" y="322" width="82" height="64" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <rect x="764" y="322" width="86" height="64" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <rect x="662" y="406" width="188" height="52" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <g id="plan-fields">
+      <rect x="908" y="262" width="238" height="42" rx="12" fill="#111827" stroke="#64748b"/><text x="930" y="289" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#e2e8f0">Content Blocks</text>
+      <rect x="908" y="322" width="238" height="42" rx="12" fill="#111827" stroke="#64748b"/><text x="930" y="349" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#e2e8f0">Designer Handoff</text>
+      <rect x="908" y="382" width="238" height="42" rx="12" fill="#111827" stroke="#64748b"/><text x="930" y="409" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#e2e8f0">Bento Layout Plan</text>
+      <rect x="908" y="442" width="238" height="42" rx="12" fill="#111827" stroke="#64748b"/><text x="930" y="469" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#e2e8f0">Visual Direction</text>
+    </g>
+    <text x="640" y="530" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#91a7bd">策划稿故意低装饰：它固定内容、版式和取舍。</text>
+  </g>
+  <g id="bottom-summary">
+    <rect data-role="card" x="72" y="604" width="1136" height="62" rx="18" fill="#07111f" stroke="#24445f"/>
+    <text x="108" y="643" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="800" fill="#e0f2fe">设计之前先冻结意图，重要 PPT 可以在策划稿阶段精调内容。</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect id="background" x="0" y="0" width="1280" height="720" fill="#070b16"/>
+  <g id="page-title">
+    <text x="72" y="88" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="700" fill="#5ff4e8">DESIGN AND EXPORT</text>
+    <text x="72" y="134" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="800" fill="#f8fafc">Bento SVG 到可编辑 PPTX</text>
+  </g>
+  <g id="svg-primitives">
+    <rect data-role="card" x="72" y="170" width="330" height="392" rx="24" fill="#0b1728" stroke="#22d3ee" stroke-width="2"/>
+    <text x="108" y="224" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">SVG Primitives</text>
+    <rect x="108" y="266" width="110" height="70" rx="14" fill="#102033" stroke="#2dd4bf"/>
+    <circle cx="286" cy="302" r="34" fill="#0f766e" stroke="#5eead4" stroke-width="2"/>
+    <path d="M112 386 C160 346 200 426 250 382 S320 358 356 404" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+    <text x="108" y="466" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">rect · text · line · path · group</text>
+    <text x="108" y="516" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#91a7bd">语义化 top-level g 作为选择和动画目标。</text>
+  </g>
+  <g id="converter">
+    <rect data-role="card" x="474" y="210" width="332" height="312" rx="24" fill="#0b1728" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="510" y="264" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">Native Converter</text>
+    <rect x="510" y="306" width="236" height="50" rx="14" fill="#111827" stroke="#a78bfa"/>
+    <text x="532" y="338" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#e9d5ff">ppt_master_bridge.py</text>
+    <rect x="510" y="380" width="236" height="50" rx="14" fill="#111827" stroke="#c4b5fd"/>
+    <text x="532" y="412" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#e9d5ff">assemble_pptx.py</text>
+    <path d="M414 366 H462 M818 366 H866" stroke="#64748b" stroke-width="5"/>
+    <polygon points="462,366 446,356 446,376" fill="#64748b"/>
+    <polygon points="866,366 850,356 850,376" fill="#64748b"/>
+  </g>
+  <g id="ppt-objects">
+    <rect data-role="card" x="878" y="170" width="330" height="392" rx="24" fill="#0b1728" stroke="#fb923c" stroke-width="2"/>
+    <text x="914" y="224" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">PowerPoint Objects</text>
+    <rect x="914" y="268" width="220" height="44" rx="12" fill="#111827" stroke="#fb923c"/><text x="936" y="296" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#fed7aa">editable text</text>
+    <rect x="914" y="334" width="220" height="44" rx="12" fill="#111827" stroke="#fbbf24"/><text x="936" y="362" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#fef3c7">native shapes</text>
+    <rect x="914" y="400" width="220" height="44" rx="12" fill="#111827" stroke="#86efac"/><text x="936" y="428" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dcfce7">groups / paths</text>
+    <rect x="914" y="466" width="220" height="44" rx="12" fill="#111827" stroke="#67e8f9"/><text x="936" y="494" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#cffafe">pictures</text>
+  </g>
+  <g id="bottom-summary">
+    <rect data-role="card" x="72" y="604" width="1136" height="62" rx="18" fill="#07111f" stroke="#24445f"/>
+    <text x="108" y="643" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="800" fill="#e0f2fe">主产物是 editable deck；snapshot deck 只负责视觉对照，不代表编辑能力。</text>
+  </g>
+</svg>

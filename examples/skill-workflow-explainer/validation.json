@@ -1,0 +1,120 @@
+{
+  "total": 8,
+  "passed": 8,
+  "warnings": 0,
+  "failed": 0,
+  "slides": [
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_01.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_01.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 5,
+        "native_event_count": 46,
+        "media_files": 0,
+        "animation_targets": 4
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_02.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_02.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 5,
+        "native_event_count": 45,
+        "media_files": 0,
+        "animation_targets": 4
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_03.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_03.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 4,
+        "native_event_count": 60,
+        "media_files": 0,
+        "animation_targets": 3
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_04.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_04.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 6,
+        "native_event_count": 45,
+        "media_files": 0,
+        "animation_targets": 5
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_05.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_05.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 6,
+        "native_event_count": 39,
+        "media_files": 0,
+        "animation_targets": 5
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_06.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_06.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 5,
+        "native_event_count": 45,
+        "media_files": 0,
+        "animation_targets": 4
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_07.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_07.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 6,
+        "native_event_count": 36,
+        "media_files": 0,
+        "animation_targets": 5
+      }
+    },
+    {
+      "path": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/svg/slide_08.svg",
+      "status": "pass",
+      "errors": [],
+      "warnings": [],
+      "preview": "/home/fecyj/.agents/skills/codex-bento-ppt/examples/skill-workflow-explainer/previews/slide_08.png",
+      "native_editable": {
+        "status": "pass",
+        "converted_top_level": 6,
+        "native_event_count": 40,
+        "media_files": 0,
+        "animation_targets": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "project": "skill-workflow-explainer",
+  "topic": "codex-bento-ppt skill 思路剖析与具体工作流实现",
+  "sources": [
+    {
+      "path": "../../SKILL.md",
+      "type": "markdown",
+      "title": "codex-bento-ppt skill entrypoint",
+      "extraction_status": "read",
+      "topics": [
+        "workflow",
+        "non-negotiables",
+        "project layout",
+        "PPTX assembly"
+      ]
+    },
+    {
+      "path": "../../references/linuxdo-methodology.md",
+      "type": "markdown",
+      "title": "Linux.do PPT Agent methodology adapted for Codex",
+      "extraction_status": "read",
+      "topics": [
+        "consultant workflow",
+        "Bento Grid",
+        "SVG output",
+        "editable PPTX"
+      ]
+    },
+    {
+      "path": "../../prompts/",
+      "type": "directory",
+      "title": "role prompts",
+      "extraction_status": "read",
+      "topics": [
+        "source ingestion",
+        "requirement consulting",
+        "research",
+        "outline",
+        "page planning",
+        "SVG design",
+        "visual review"
+      ]
+    },
+    {
+      "path": "../../scripts/",
+      "type": "directory",
+      "title": "deterministic helper scripts",
+      "extraction_status": "read",
+      "topics": [
+        "project initialization",
+        "source ingestion",
+        "SVG validation",
+        "editable PPTX export",
+        "PPTX inspection"
+      ]
+    }
+  ],
+  "reusable_visual_material": []
+}

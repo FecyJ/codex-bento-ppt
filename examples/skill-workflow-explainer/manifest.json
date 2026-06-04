@@ -1,0 +1,23 @@
+{
+  "title": "codex-bento-ppt 思路剖析与工作流实现",
+  "target_slide_count": 8,
+  "created_at": "2026-06-04T11:37:20.060725+00:00",
+  "workflow": "codex-bento-ppt",
+  "canvas": {
+    "width": 1280,
+    "height": 720
+  },
+  "artifacts": {
+    "source_inventory": "source_inventory.json",
+    "source_digest": "source_digest.md",
+    "source_assets": "source_assets/",
+    "requirements": "requirements.md",
+    "research": "research.md",
+    "outline": "outline.json",
+    "sticky_notes": "sticky_notes.md",
+    "page_plans": "page_plans/",
+    "svg": "svg/",
+    "previews": "previews/",
+    "exports": "exports/"
+  }
+}

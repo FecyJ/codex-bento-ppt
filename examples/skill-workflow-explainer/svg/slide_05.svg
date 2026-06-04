@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect id="background" x="0" y="0" width="1280" height="720" fill="#070b16"/>
+  <g id="page-title">
+    <text x="72" y="88" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="700" fill="#5ff4e8">PROMPT ENGINEERING</text>
+    <text x="72" y="134" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="800" fill="#f8fafc">结构架构师 + 研究上下文</text>
+  </g>
+  <g id="research-card">
+    <rect data-role="card" x="72" y="170" width="288" height="390" rx="24" fill="#0b1728" stroke="#22d3ee" stroke-width="2"/>
+    <text x="108" y="224" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">Research Packets</text>
+    <rect x="108" y="266" width="202" height="42" rx="12" fill="#102033" stroke="#2dd4bf"/><text x="128" y="293" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">facts + dates</text>
+    <rect x="108" y="330" width="202" height="42" rx="12" fill="#102033" stroke="#38bdf8"/><text x="128" y="357" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">source + caveats</text>
+    <rect x="108" y="394" width="202" height="42" rx="12" fill="#102033" stroke="#a78bfa"/><text x="128" y="421" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">slide uses</text>
+    <text x="108" y="500" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#91a7bd">研究不是摘要，而是给页面使用的证据包。</text>
+  </g>
+  <g id="pyramid-card">
+    <rect data-role="card" x="388" y="140" width="504" height="450" rx="26" fill="#0b1728" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="424" y="194" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">顶级 PPT 结构架构师</text>
+    <text x="424" y="228" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#b7c7da">Context-aware · 金字塔原理 · 结论先行</text>
+    <polygon points="640,274 505,490 775,490" fill="#151b3a" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="557" y1="406" x2="723" y2="406" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="590" y1="352" x2="690" y2="352" stroke="#a78bfa" stroke-width="2"/>
+    <text x="608" y="335" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="800" fill="#f8fafc">核心结论</text>
+    <text x="578" y="388" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#e0e7ff">分组论据</text>
+    <text x="544" y="464" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#e0e7ff">页面消息与证据</text>
+    <rect x="424" y="518" width="392" height="42" rx="12" fill="#111827" stroke="#475569"/>
+    <text x="448" y="545" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#e2e8f0">过时 / 证据不足的结论不能进入核心大纲</text>
+  </g>
+  <g id="output-card">
+    <rect data-role="card" x="920" y="170" width="288" height="390" rx="24" fill="#0b1728" stroke="#fb923c" stroke-width="2"/>
+    <text x="956" y="224" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#f8fafc">结构产物</text>
+    <rect x="956" y="268" width="198" height="52" rx="14" fill="#111827" stroke="#fb923c"/><text x="978" y="301" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#fed7aa">outline.json</text>
+    <rect x="956" y="348" width="198" height="52" rx="14" fill="#111827" stroke="#fbbf24"/><text x="978" y="381" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#fef3c7">sticky_notes.md</text>
+    <rect x="956" y="428" width="198" height="52" rx="14" fill="#111827" stroke="#86efac"/><text x="978" y="461" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dcfce7">approval gate</text>
+    <text x="956" y="526" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#91a7bd">先审故事线，再进入视觉设计。</text>
+  </g>
+  <g id="bottom-summary">
+    <rect data-role="card" x="72" y="612" width="1136" height="54" rx="16" fill="#07111f" stroke="#24445f"/>
+    <text x="108" y="647" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="800" fill="#e0f2fe">提示词重点不是“格式像 JSON”，而是让研究证据约束结构判断。</text>
+  </g>
+</svg>

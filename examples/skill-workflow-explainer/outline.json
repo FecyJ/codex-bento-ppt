@@ -1,0 +1,151 @@
+{
+  "ppt_outline": {
+    "cover": {
+      "title": "codex-bento-ppt",
+      "sub_title": "从原始材料到可编辑 PPTX 的 Bento Grid 工作流",
+      "content": []
+    },
+    "table_of_contents": {
+      "title": "目录",
+      "content": [
+        "设计理念：为什么不是一键模板",
+        "工作流：从 source ingestion 到 final evidence",
+        "实现细节：SVG 与 native editable PPTX",
+        "如何使用：项目结构与验收命令"
+      ]
+    },
+    "parts": [
+      {
+        "part_title": "第一部分：方法论",
+        "pages": [
+          {
+            "title": "从模板工具到专家团队",
+            "content": ["问题：一键模板忽略需求、证据和结构", "解法：把 PPT 拆成咨询、研究、结构、策划、设计、验证角色"]
+          },
+          {
+            "title": "完整工作流地图",
+            "content": ["0-8 阶段串行推进", "每阶段都有可检查交付物"]
+          }
+        ]
+      },
+      {
+        "part_title": "第二部分：阶段实现",
+        "pages": [
+          {
+            "title": "Source Ingestion",
+            "content": ["先读用户材料", "DOCX/PDF/XLSX 优先调用对应 skill", "图片进入备用素材池"]
+          },
+          {
+            "title": "角色链与提示词工程",
+            "content": ["结构架构师使用金字塔原理", "研究上下文约束结论", "策划稿保护设计质量"]
+          },
+          {
+            "title": "便利贴与策划稿",
+            "content": ["每页先成为数字便利贴", "策划稿固定内容块、布局和视觉意图"]
+          },
+          {
+            "title": "Bento SVG Design",
+            "content": ["内容驱动卡片数量与尺寸", "深色科技 dashboard 风格", "SVG primitives 保持可转换"]
+          }
+        ]
+      },
+      {
+        "part_title": "第三部分：输出与验收",
+        "pages": [
+          {
+            "title": "Native Editable Export",
+            "content": ["SVG DOM 转 DrawingML", "editable deck 为主产物", "snapshot deck 作视觉对照"]
+          },
+          {
+            "title": "使用方式与完成证据",
+            "content": ["examples 项目结构", "validate / assemble / inspect 三组命令", "验收标准"]
+          }
+        ]
+      }
+    ],
+    "end_page": {
+      "title": "总结",
+      "content": ["高质量 PPT 生成是流程工程，不是模板替换。"]
+    }
+  },
+  "deck": {
+    "title": "codex-bento-ppt 思路剖析与工作流实现",
+    "subtitle": "从原始材料到可编辑 PPTX",
+    "audience": "Codex 用户、skill 作者、自动化工作流设计者",
+    "objective": "解释 codex-bento-ppt 的设计思想、阶段产物、关键实现和验收方式",
+    "slides": [
+      {
+        "id": "slide_01",
+        "role": "cover",
+        "title": "codex-bento-ppt",
+        "message": "这不是模板填充，而是一条可审计的 PPT 生产线。",
+        "evidence": ["SKILL.md workflow 0-8"],
+        "audience_value": "先建立整体心智模型",
+        "visual_intent": "深色封面，管线与关键产物节点"
+      },
+      {
+        "id": "slide_02",
+        "role": "method",
+        "title": "核心思想：把 PPT 当作专家团队交付物",
+        "message": "质量来自角色拆分和阶段产物，而不是一次性生成。",
+        "evidence": ["linuxdo-methodology.md", "prompts/*"],
+        "audience_value": "理解为什么流程较长",
+        "visual_intent": "专家角色卡片 + 反模板对比"
+      },
+      {
+        "id": "slide_03",
+        "role": "workflow",
+        "title": "工作流地图：0 到 8 的串行闭环",
+        "message": "每一阶段都把不确定性转化为可检查文件。",
+        "evidence": ["SKILL.md Workflow"],
+        "audience_value": "知道运行顺序与产物",
+        "visual_intent": "横向阶段管线 + artifact chips"
+      },
+      {
+        "id": "slide_04",
+        "role": "implementation",
+        "title": "Source Ingestion：先读材料，再谈需求",
+        "message": "用户材料、嵌入图片和表格先被归档，后续决策都回到证据。",
+        "evidence": ["prompts/00-source-ingestion.md", "scripts/ingest_sources.py"],
+        "audience_value": "理解第 0 阶段的价值",
+        "visual_intent": "输入文件流入 inventory/digest/assets"
+      },
+      {
+        "id": "slide_05",
+        "role": "prompt-engineering",
+        "title": "提示词工程：结构架构师 + 研究上下文",
+        "message": "大纲必须被研究上下文约束，避免凭空编故事。",
+        "evidence": ["prompts/02-researcher.md", "prompts/03-outline-architect.md"],
+        "audience_value": "看到 prompt 设计如何落到结构质量",
+        "visual_intent": "金字塔结构 + context guardrail"
+      },
+      {
+        "id": "slide_06",
+        "role": "planning",
+        "title": "便利贴与策划稿：设计前先冻结意图",
+        "message": "每页先是可移动的 sticky note，再成为给设计师的策划稿。",
+        "evidence": ["prompts/03-outline-architect.md", "prompts/04-page-planner.md"],
+        "audience_value": "理解设计前的内容锁定机制",
+        "visual_intent": "便利贴墙 + wireframe draft"
+      },
+      {
+        "id": "slide_07",
+        "role": "design-export",
+        "title": "Bento SVG 到可编辑 PPTX",
+        "message": "Bento Grid 负责表达，native DrawingML 转换负责可编辑。",
+        "evidence": ["prompts/05-svg-designer.md", "scripts/assemble_pptx.py"],
+        "audience_value": "理解视觉和工程之间的约束",
+        "visual_intent": "SVG primitives 分解为 PPT objects"
+      },
+      {
+        "id": "slide_08",
+        "role": "usage",
+        "title": "如何使用与验收",
+        "message": "一个项目目录、三组命令、两份 PPTX，构成可复现交付。",
+        "evidence": ["SKILL.md Final Evidence", "scripts/validate_svg.py", "scripts/inspect_pptx.py"],
+        "audience_value": "能照着复用或改造",
+        "visual_intent": "项目目录 + 命令检查清单"
+      }
+    ]
+  }
+}

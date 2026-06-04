@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect id="background" x="0" y="0" width="1280" height="720" fill="#070b16"/>
+  <g id="page-title">
+    <text x="72" y="88" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="700" fill="#5ff4e8">STAGE 0</text>
+    <text x="72" y="134" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="40" font-weight="800" fill="#f8fafc">Source Ingestion：先读材料，再谈需求</text>
+  </g>
+  <g id="inputs">
+    <rect data-role="card" x="72" y="164" width="365" height="408" rx="24" fill="#0b1728" stroke="#22d3ee" stroke-width="2"/>
+    <text x="108" y="216" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">输入材料</text>
+    <g id="input-md"><rect x="108" y="254" width="248" height="44" rx="12" fill="#102033" stroke="#2dd4bf"/><text x="132" y="283" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">Markdown / text</text></g>
+    <g id="input-docx"><rect x="108" y="316" width="248" height="44" rx="12" fill="#102033" stroke="#38bdf8"/><text x="132" y="345" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">DOCX / PDF</text></g>
+    <g id="input-xlsx"><rect x="108" y="378" width="248" height="44" rx="12" fill="#102033" stroke="#a78bfa"/><text x="132" y="407" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">XLSX / CSV / TSV</text></g>
+    <g id="input-image"><rect x="108" y="440" width="248" height="44" rx="12" fill="#102033" stroke="#fb923c"/><text x="132" y="469" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">images / SVGs</text></g>
+    <text x="108" y="530" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#91a7bd">目录会递归扫描；不支持文件也会记录 warning。</text>
+  </g>
+  <g id="routing">
+    <rect data-role="card" x="468" y="164" width="344" height="408" rx="24" fill="#0b1728" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="504" y="216" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">优先级路由</text>
+    <path d="M536 286 H744" stroke="#5b6b83" stroke-width="3"/>
+    <circle cx="536" cy="286" r="18" fill="#312e81" stroke="#c4b5fd" stroke-width="2"/><text x="566" y="292" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">docx skill</text>
+    <circle cx="536" cy="356" r="18" fill="#312e81" stroke="#c4b5fd" stroke-width="2"/><text x="566" y="362" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">pdf skill</text>
+    <circle cx="536" cy="426" r="18" fill="#312e81" stroke="#c4b5fd" stroke-width="2"/><text x="566" y="432" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#dbeafe">xlsx skill</text>
+    <rect x="504" y="484" width="240" height="48" rx="14" fill="#111827" stroke="#64748b"/>
+    <text x="526" y="515" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#e2e8f0">fallback normalization</text>
+  </g>
+  <g id="outputs">
+    <rect data-role="card" x="844" y="164" width="364" height="408" rx="24" fill="#0b1728" stroke="#fb923c" stroke-width="2"/>
+    <text x="880" y="216" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="25" font-weight="800" fill="#f8fafc">标准化产物</text>
+    <rect x="880" y="260" width="248" height="54" rx="14" fill="#111827" stroke="#fb923c"/><text x="902" y="294" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#fed7aa">source_inventory.json</text>
+    <rect x="880" y="336" width="248" height="54" rx="14" fill="#111827" stroke="#fbbf24"/><text x="902" y="370" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#fef3c7">source_digest.md</text>
+    <rect x="880" y="412" width="248" height="54" rx="14" fill="#111827" stroke="#5eead4"/><text x="902" y="446" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#ccfbf1">source_assets/</text>
+    <text x="880" y="520" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#91a7bd">嵌入图片和用户图片进入备用素材池。</text>
+  </g>
+  <g id="why">
+    <rect data-role="card" x="72" y="604" width="1136" height="62" rx="18" fill="#07111f" stroke="#24445f"/>
+    <text x="108" y="643" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="800" fill="#e0f2fe">价值：需求、研究、设计都从具体材料出发，降低幻觉并保留可复用视觉资产。</text>
+  </g>
+</svg>

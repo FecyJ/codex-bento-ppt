@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="55%" stop-color="#0b1024"/>
+      <stop offset="100%" stop-color="#080a12"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101d33" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#07111f" stop-opacity="0.96"/>
+    </linearGradient>
+  </defs>
+  <rect id="background" x="0" y="0" width="1280" height="720" fill="url(#bg1)"/>
+  <g id="blueprint-grid" opacity="0.32">
+    <path d="M80 120 H1200 M80 250 H1200 M80 380 H1200 M80 510 H1200 M80 640 H1200" stroke="#17314e" stroke-width="1"/>
+    <path d="M180 72 V660 M360 72 V660 M540 72 V660 M720 72 V660 M900 72 V660 M1080 72 V660" stroke="#11243b" stroke-width="1"/>
+  </g>
+  <g id="hero-title">
+    <text x="72" y="92" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="700" fill="#5ff4e8">CODEX SKILL DECK</text>
+    <text x="72" y="160" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="58" font-weight="800" fill="#f8fafc">codex-bento-ppt</text>
+    <text x="72" y="214" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="30" font-weight="700" fill="#c4d8ee">从原始材料到可编辑 PPTX 的 Bento Grid 工作流</text>
+    <line x1="72" y1="244" x2="548" y2="244" stroke="#22d3ee" stroke-width="5"/>
+  </g>
+  <g id="promise-cards">
+    <g id="card-content-first">
+      <rect data-role="card" x="72" y="314" width="330" height="148" rx="24" fill="url(#card1)" stroke="#22d3ee" stroke-width="2"/>
+      <text x="104" y="366" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="800" fill="#f8fafc">Content-first</text>
+      <text x="104" y="410" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#9fb4c8">先读材料、问需求、做结构</text>
+    </g>
+    <g id="card-bento-svg">
+      <rect data-role="card" x="430" y="314" width="330" height="148" rx="24" fill="url(#card1)" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="462" y="366" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="800" fill="#f8fafc">Bento SVG</text>
+      <text x="462" y="410" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#b7c7da">卡片网格承载高密度信息</text>
+    </g>
+    <g id="card-editable-pptx">
+      <rect data-role="card" x="788" y="314" width="420" height="148" rx="24" fill="url(#card1)" stroke="#fb923c" stroke-width="2"/>
+      <text x="820" y="366" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="800" fill="#f8fafc">Native Editable PPTX</text>
+      <text x="820" y="410" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#fed7aa">文本、卡片、线条都能直接点选修改</text>
+    </g>
+  </g>
+  <g id="bottom-pipeline">
+    <rect x="72" y="558" width="1136" height="76" rx="20" fill="#07111f" stroke="#24445f" stroke-width="1.5"/>
+    <g id="pipe-source"><circle cx="132" cy="596" r="14" fill="#0f766e" stroke="#5eead4" stroke-width="2"/><text x="156" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">source</text></g>
+    <g id="pipe-consult"><circle cx="275" cy="596" r="14" fill="#164e63" stroke="#67e8f9" stroke-width="2"/><text x="299" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">consult</text></g>
+    <g id="pipe-outline"><circle cx="430" cy="596" r="14" fill="#312e81" stroke="#a78bfa" stroke-width="2"/><text x="454" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">outline</text></g>
+    <g id="pipe-plan"><circle cx="585" cy="596" r="14" fill="#4338ca" stroke="#c4b5fd" stroke-width="2"/><text x="609" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">plan</text></g>
+    <g id="pipe-svg"><circle cx="728" cy="596" r="14" fill="#0e7490" stroke="#22d3ee" stroke-width="2"/><text x="752" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">SVG</text></g>
+    <g id="pipe-validate"><circle cx="872" cy="596" r="14" fill="#854d0e" stroke="#fbbf24" stroke-width="2"/><text x="896" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">validate</text></g>
+    <g id="pipe-pptx"><circle cx="1040" cy="596" r="14" fill="#9a3412" stroke="#fb923c" stroke-width="2"/><text x="1064" y="603" font-family="Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#dbeafe">PPTX</text></g>
+    <path d="M146 596 H261 M289 596 H416 M444 596 H571 M599 596 H714 M742 596 H858 M886 596 H1026" stroke="#52677f" stroke-width="3"/>
+  </g>
+</svg>

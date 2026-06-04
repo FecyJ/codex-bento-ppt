@@ -1,0 +1,199 @@
+{
+  "title": "应该是目前最强的PPT Agent，附上完整思路分享 - 开发调优 - LINUX DO",
+  "source_url": "https://linux.do/t/topic/1782304",
+  "archive_source": "Jina Markdown cache plus direct CDN media downloads",
+  "archived_at": "2026-06-04",
+  "image_count": 19,
+  "images": [
+    {
+      "image_number": 1,
+      "alt": "封面-1-设计稿 (1)",
+      "title": "封面-1-设计稿 (1)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/c/a/7/ca785958d37aba2c5e234af1f4d969945ae87b2f.jpeg",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/c/a/7/ca785958d37aba2c5e234af1f4d969945ae87b2f_2_690x388.jpeg",
+      "local_path": "images/image_01.jpeg",
+      "bytes": 138036,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 2,
+      "alt": "分层架构设计：从数据层到编排层-7-设计稿",
+      "title": "分层架构设计：从数据层到编排层-7-设计稿",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/2/b/9/2b9fbeb40ca978629c4986e994c2abc701f00121.jpeg",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/2/b/9/2b9fbeb40ca978629c4986e994c2abc701f00121_2_690x388.jpeg",
+      "local_path": "images/image_02.jpeg",
+      "bytes": 254287,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 3,
+      "alt": "核心硬件：AIoT智能家居与人车家全生态闭环-8-设计稿",
+      "title": "核心硬件：AIoT智能家居与人车家全生态闭环-8-设计稿",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/a/a/f/aaf137fb6a7a4ddff3c818a7c07cd5cb44562aea.jpeg",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/a/a/f/aaf137fb6a7a4ddff3c818a7c07cd5cb44562aea_2_690x388.jpeg",
+      "local_path": "images/image_03.jpeg",
+      "bytes": 253413,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 4,
+      "alt": "微信图片_20260317175828_1476_1",
+      "title": "微信图片_20260317175828_1476_1",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/1/1/8/1181834e44162e2c873288ee999a8184e54380ad.jpeg",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/1/1/8/1181834e44162e2c873288ee999a8184e54380ad_2_690x370.jpeg",
+      "local_path": "images/image_04.jpeg",
+      "bytes": 302759,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 5,
+      "alt": "微信图片_20260317175833_1477_1",
+      "title": "微信图片_20260317175833_1477_1",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/c/f/d/cfdbb2954d1b93ffc430c8a5652b3ef34f92dc5b.jpeg",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/c/f/d/cfdbb2954d1b93ffc430c8a5652b3ef34f92dc5b_2_690x437.jpeg",
+      "local_path": "images/image_05.jpeg",
+      "bytes": 283099,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 6,
+      "alt": "3333",
+      "title": "3333",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/2/7/3/273349036183b47dd6873ff8a6fc4b7a269bc974.gif",
+      "thumbnail_url": null,
+      "local_path": "images/image_06.gif",
+      "bytes": 1895033,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 7,
+      "alt": "640 (5)",
+      "title": "640 (5)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/f/1/a/f1aab7cf304e037dc060a30e2f22555a06a83a24.gif",
+      "thumbnail_url": null,
+      "local_path": "images/image_07.gif",
+      "bytes": 3773026,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 8,
+      "alt": "640 (3)",
+      "title": "640 (3)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/f/4/5/f45478b3c2c96c726e50d357f2b776f372267dfc.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/f/4/5/f45478b3c2c96c726e50d357f2b776f372267dfc_2_690x388.webp",
+      "local_path": "images/image_08.webp",
+      "bytes": 30356,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 9,
+      "alt": "1",
+      "title": "1",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/1/c/e/1cec102727d58958c25d6da46a1955e063b95199.gif",
+      "thumbnail_url": null,
+      "local_path": "images/image_09.gif",
+      "bytes": 1127096,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 10,
+      "alt": "640 (4)",
+      "title": "640 (4)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/6/2/a/62a898a2d1178c85985ece017fc7ec2f166280c4.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/6/2/a/62a898a2d1178c85985ece017fc7ec2f166280c4_2_690x333.webp",
+      "local_path": "images/image_10.webp",
+      "bytes": 52172,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 11,
+      "alt": "ScreenShot_2026-03-19_104103_358",
+      "title": "ScreenShot_2026-03-19_104103_358",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/6/3/0/6305c980802f3a1ddff840e44a71c842a9d9ea88.png",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/6/3/0/6305c980802f3a1ddff840e44a71c842a9d9ea88_2_690x310.png",
+      "local_path": "images/image_11.png",
+      "bytes": 469739,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 12,
+      "alt": "640 (5)",
+      "title": "640 (5)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/6/b/f/6bffcac7dd291641b6cdfa71cce3538a58248974.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/6/b/f/6bffcac7dd291641b6cdfa71cce3538a58248974_2_690x247.webp",
+      "local_path": "images/image_12.webp",
+      "bytes": 21174,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 13,
+      "alt": "640 (7)",
+      "title": "640 (7)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/b/6/3/b6318bdc47fbfd9d7466fdbb944ad839d6154158.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/b/6/3/b6318bdc47fbfd9d7466fdbb944ad839d6154158_2_690x370.webp",
+      "local_path": "images/image_13.webp",
+      "bytes": 32742,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 14,
+      "alt": "640 (6)",
+      "title": "640 (6)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/5/1/9/519bbc1c6824983966ca86882578e0c752288d66.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/5/1/9/519bbc1c6824983966ca86882578e0c752288d66_2_690x487.webp",
+      "local_path": "images/image_14.webp",
+      "bytes": 34044,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 15,
+      "alt": "640 (8)",
+      "title": "640 (8)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/b/c/8/bc840a42bada631399f6d5c0504b9b11990210a7.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/b/c/8/bc840a42bada631399f6d5c0504b9b11990210a7_2_690x487.webp",
+      "local_path": "images/image_15.webp",
+      "bytes": 39306,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 16,
+      "alt": "640 (9)",
+      "title": "640 (9)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/2/8/d/28d75c58237d2ea179ddd772da651aae0ac455ce.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/2/8/d/28d75c58237d2ea179ddd772da651aae0ac455ce_2_690x387.webp",
+      "local_path": "images/image_16.webp",
+      "bytes": 47284,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 17,
+      "alt": "640 (10)",
+      "title": "640 (10)",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/c/7/a/c7a44935dcb61e2bc0421e6e8b2a35343a044806.webp",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/c/7/a/c7a44935dcb61e2bc0421e6e8b2a35343a044806_2_690x388.webp",
+      "local_path": "images/image_17.webp",
+      "bytes": 40190,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 18,
+      "alt": "ScreenShot_2026-03-19_104134_376",
+      "title": "ScreenShot_2026-03-19_104134_376",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/c/7/4/c74bd996a229c7abf44d1ad0a6ff9d1dd37d78bc.png",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/c/7/4/c74bd996a229c7abf44d1ad0a6ff9d1dd37d78bc_2_557x500.png",
+      "local_path": "images/image_18.png",
+      "bytes": 150205,
+      "status": "downloaded"
+    },
+    {
+      "image_number": 19,
+      "alt": "ScreenShot_2026-03-19_103904_044",
+      "title": "ScreenShot_2026-03-19_103904_044",
+      "source_url": "https://cdn3.ldstatic.com/original/4X/2/6/f/26f3fcb9890f2b0727180c9ef98a18cc01900137.jpeg",
+      "thumbnail_url": "https://cdn3.ldstatic.com/optimized/4X/2/6/f/26f3fcb9890f2b0727180c9ef98a18cc01900137_2_690x347.jpeg",
+      "local_path": "images/image_19.jpeg",
+      "bytes": 383846,
+      "status": "downloaded"
+    }
+  ]
+}

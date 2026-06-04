@@ -1,0 +1,5 @@
+interface:
+  display_name: "Codex Bento PPT"
+  short_description: "Build editable Bento PPT decks from source materials"
+  brand_color: "#2563EB"
+  default_prompt: "Use $codex-bento-ppt to create an editable polished PPT deck from this source directory."
