@@ -1,6 +1,8 @@
 # codex-bento-ppt
 
-`codex-bento-ppt` 是一套面向任意 agent 的 PPT 生成 skill：从用户提供的原始材料出发，经过 source ingestion、需求澄清、研究、便利贴式大纲、逐页策划稿、Bento Grid SVG 设计、视觉校验，最终导出可逐元素编辑的 PowerPoint。
+`codex-bento-ppt` 是一套面向任意 agent 的 PPT 生成 skill，受 Linux.do 原帖 [《一套完整的 AI PPT Agent 工作流》](https://linux.do/t/topic/1782304) 启发。原帖提出了从需求澄清、资料研究、结构规划、逐页策划到 SVG 设计的完整思路，本项目在此基础上整理为可复用的 skill，并补齐 source ingestion、跨 agent 能力契约和 native editable PPTX 导出。
+
+具体工作流、角色分工和设计方法可以对照原帖理解：它不是“输入主题后套模板”，而是把 PPT 当作咨询交付物和设计交付物来生产。`codex-bento-ppt` 延续这个方向，从用户提供的原始材料出发，经过 source ingestion、需求澄清、研究、便利贴式大纲、逐页策划稿、Bento Grid SVG 设计、视觉校验，最终导出可逐元素编辑的 PowerPoint。
 
 这个仓库保留 `codex-bento-ppt` 作为 skill 名称，但运行定位不是 Codex-only。任何具备本地文件读取、Python 脚本执行和基础文档处理能力的 agent 都可以按 `SKILL.md` 执行这套工作流。
 
@@ -13,6 +15,8 @@
 - 最终交付必须是 native editable PPTX，而不是整页截图式 PPTX。
 
 ## 工作流
+
+这一节是对原帖方法的工程化拆解。原帖中的多角色、多阶段协作被整理成固定产物链，方便不同 agent 在本地文件系统中持续推进和校验。
 
 1. Source Ingestion：读取用户给出的原始材料，生成 `source_inventory.json` 和 `source_digest.md`。
 2. Requirement Consulting：明确受众、场景、目标、页数、风格、必须使用或禁止出现的内容。
@@ -115,23 +119,32 @@ DOCX、PDF、XLSX、联网研究、OCR、图片生成等都属于可选增强能
 
 ## 目录结构
 
+仓库目录既包含 agent 执行所需的 skill 文件，也包含可重复运行的脚本、参考材料、示例输出和内置 converter。常见入口如下：
+
 ```text
 codex-bento-ppt/
-├── SKILL.md
-├── README.md
-├── requirement.txt
-├── agents/
-├── prompts/
-├── references/
-├── scripts/
-├── vendor/
-│   ├── svg_finalize/
-│   └── svg_to_pptx/
-└── examples/
+├── SKILL.md              # agent 读取的核心工作流说明
+├── README.md             # GitHub 仓库说明，面向人类使用者
+├── requirement.txt       # Python 依赖清单
+├── agents/               # agent UI metadata
+├── prompts/              # 各阶段角色提示词
+├── references/           # 方法论、跨 agent 说明、原帖静态归档和附图
+├── scripts/              # source ingestion、校验、导出、检查脚本
+├── vendor/               # 内置 native converter，解除对外部 ppt-master 的硬依赖
+│   ├── svg_finalize/     # SVG 后处理 helper
+│   └── svg_to_pptx/      # SVG 到 DrawingML/PPTX 的转换实现
+└── examples/             # 示例项目和已生成的可编辑 PPTX
 ```
+
+实际生成 PPT 时，建议把每个任务放在独立项目目录下，项目目录会包含 `source_inventory.json`、`source_digest.md`、`requirements.md`、`research.md`、`outline.json`、`page_plans/`、`svg/`、`previews/` 和 `exports/` 等产物。
 
 ## 许可
 
 `vendor/svg_to_pptx` 和 `vendor/svg_finalize` 来自 `ppt-master` 的 MIT licensed native SVG-to-PPTX 相关实现，并随本仓库一起分发，以解除运行时对外部 `ppt-master` skill 的硬依赖。
 
 原始 Linux.do 方法论材料和附图作为本 skill 的参考归档保存在 `references/source/linuxdo-1782304/`，用于理解工作流来源和设计风格，不作为需要复刻的固定模板。
+
+## 参考链接
+
+- Linux.do 原帖：[https://linux.do/t/topic/1782304](https://linux.do/t/topic/1782304)
+- `ppt-master` 原仓库：[https://github.com/hugohe3/ppt-master](https://github.com/hugohe3/ppt-master)
